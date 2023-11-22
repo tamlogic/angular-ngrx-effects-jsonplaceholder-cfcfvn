@@ -1,0 +1,10 @@
+<h1>Following are the posts</h1>
+
+<hr>
+<ng-container *ngIf="(posts$ | async).posts.length > 0">
+  <div *ngFor="let post of (posts$ | async).posts">
+
+    {{post.body}}
+    <hr>
+  </div>
+</ng-container>
